@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Math Function in css -->
+<!-- min max cal -->
+<html>
+    <head></head>
+    <body>
+        <pre>
+            The calc() Function
+The calc() function performs a calculation to be used as the property value.
+CSS Syntax
+calc(expression)
+expression	Required. A mathematical expression. The result will be used as the value.
+The following operators can be used: + - * /
+        </pre>
+        exmaple : <br>
+        <div class="divclass1">
+            Text Box <br>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    .divclass1{
+        background-color: lightyellow;
+        color: green;
+        height: 30px;
+        width: calc(50% - 30px);
+    }
+    .divclass1:hover{
+        background-color: lightcoral;
+    }
+</style>

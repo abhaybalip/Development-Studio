@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- css basic -->
+<div id="infopart">
+    <pre>
+    css code can be applied by three ways
+    inline css   - side of html element
+    internal css - by writing style element in same html file
+    external css - by providing link of css stylesheet
+    for applying css for element its name or id or class is required
+    in braces its properties are defined
+    </pre>
+</div>
+<html>
+    <head>
+    </head>
+    <body>
+        This is body of html
+        <br>
+        <div class="sampleclass1">
+            this is a division
+            <br>
+            class nams set to sampleclass1
+            <br>
+        </div>
+        <br>
+        <div id="sampleid1">
+            This is a division
+            <br>
+            division id set to sampleid1
+            <br>
+            group css applied with infopart id
+        </div>
+        <br>
+    </body>
+</html>
+<!-- css style-shee -->
+<style>
+    body{
+        font-size: larger;
+        color: red;
+        background-color: lightyellow;
+    }
+    /* id selection in css : */
+    #infopart,#sampleid1{
+        color: blue;
+        font-size: larger;
+        background-color: aquamarine;
+    }
+    .sampleclass1{
+        color: green;
+        font-size: larger;
+        background-color: azure;
+    }
+</style>

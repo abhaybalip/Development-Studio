@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <pre>
+            The animation-direction property can have the following values:
+normal - The animation is played as normal (forwards). This is default
+reverse - The animation is played in reverse direction (backwards)
+alternate - The animation is played forwards first, then backwards
+alternate-reverse - The animation is played backwards first, then forwards
+
+
+            Animation timing function types :
+            none - Default value. Animation will not apply any styles to the element before or after it is executing
+            forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+            backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+            both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
+        </pre>
+        <p>Reverse Direction Animation</p>
+        <div class="div1"></div>
+        <br>
+        <p>Alternate Direction Animation</p>
+        <div class="div2"></div>
+        <br>
+        <div class="div3"></div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: hotpink;
+        border: 1px solid black;
+        border-radius: 50%;
+        position: relative;
+    }
+    .div1{
+        animation-name: example1;
+        animation-duration: 3s;
+        animation-direction: reverse;
+        animation-iteration-count: infinite;
+    }
+    @keyframes example1{
+        from{
+            background-color: hotpink;
+            left: 0px;
+        }
+        to{
+            background-color: red;
+            left: 250px;
+        }
+    }
+    .div2{
+        animation-name: example2;
+        animation-duration: 3s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+    @keyframes example2{
+        from{
+            background-color: hotpink;
+            left: 0px;
+        }
+        to{
+            background-color: greenyellow;
+            left: 250px;
+        }
+    }
+    .div3{
+        animation-name: example3;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    @keyframes example3{
+        from{
+            background-color: hotpink;
+            left: 0px;
+        }
+        to{
+            background-color: yellowgreen;
+            left: 250px;
+        }
+    }
+</style>

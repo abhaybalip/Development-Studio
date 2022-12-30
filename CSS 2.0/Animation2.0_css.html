@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="div1"></div>
+        <br>
+        <p>Animation with itration count</p>
+        <div class="div2"></div>
+        <br>
+        <p>Animation with infinite iteration</p>
+        <div class="div3"></div>
+        <br>
+        <p>Animation with Direction</p>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: aquamarine;
+        border: 1px solid black;
+        border-radius: 50%;
+        position: relative;
+    }
+    .div1{
+        /* Animation Characteristics */
+        animation: sample1;
+        animation-duration: 5s;
+        animation-delay: 3s;
+    }
+    @keyframes sample1{
+        from{
+            background-color: aqua;
+            left: 0px;
+        }
+        to{
+            background-color: blue;
+            left: 250px;
+        }
+    }
+    .div2{
+        animation-name: sample2;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+    }
+    @keyframes sample2{
+        from{
+            background-color: chocolate;
+            left: 0px;
+        }
+        to{
+            background-color: darkmagenta;
+            left: 300px;
+        }
+    }
+    .div3{
+        animation-name: sample3;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes sample3{
+        0%{
+            background-color: #0a810a;
+            left: 0px;
+        }
+        50%{
+            background-color: rgb(255, 143, 39);
+            left: 250px;
+        }
+        100%{
+            background-color: green;
+            left: 0px;
+        }
+    }
+</style>

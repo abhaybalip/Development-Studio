@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="Option">
+            Option
+            <div class="Option_List">
+                <p>option 1</p>
+                <p>option 2</p>
+                <p>option 3</p>
+            </div>
+        </div>
+        <div class="Option">
+            Option
+            <div class="Option_List">
+                <p>option 1</p>
+                <p>option 2</p>
+                <p>option 3</p>
+            </div>
+        </div>
+        <div class="Option">
+            Option
+            <div class="Option_List">
+                <p>option 1</p>
+                <p>option 2</p>
+                <p>option 3</p>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    .Option{
+        border: 1px solid black;
+        background-color: lightgrey;
+        height: 25px;
+        width: 50px;
+        margin-right: 25px;
+        position: relative;
+        display: inline-block;
+    }
+    p{
+        height: 25px;
+        width: 75px;
+        background-color: lightyellow;
+        outline: 1px dashed red;
+        /* border: 1px solid black; */
+    }
+    /* On hover display changes to block type for both */
+    .Option:hover .Option_List{
+        display: block;
+    }
+    .Option_List{
+        background-color: pink;
+        border: 1px solid black;
+        position: absolute;
+        top:25px;
+        /* left is -1 to start from border */
+        left: -1px;
+        display: none;
+    }
+</style>

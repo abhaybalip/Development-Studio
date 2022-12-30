@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <pre>
+            The display property specifies if/how an element is displayed.
+
+Every HTML element has a default display value depending on what type of element it is.
+The default display value for most elements is block or inline.
+            <br>
+            Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+            Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+        </pre>
+        <br>
+        <div class="divclass1">
+            This is first division <br>
+            display set to none <br>
+        </div>
+        <br>
+        <div class="divclass2">
+            This is second division <br>
+            display set to visible <br>
+        </div>
+        <br>
+        <div class="divclass3">
+            This is third division <br>
+            display set to block <br>
+        </div>
+        <br>
+        <div class="divclass5">
+            This is fifth division <br>
+            display set to inline-block <br>
+        </div>
+        <br>
+        <div class="divclass4">
+            This is fourth division <br>
+            visibility set to hidden <br>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    pre{
+        font-size: large;
+        color: black;
+    }
+    .divclass1{
+        width:2in;
+        border: 1px solid black;
+        display: none;
+    }
+    .divclass2{
+        width:2in;
+        border: 1px solid black;
+        display: visible;
+    }
+    .divclass3{
+        width:2in;
+        border: 1px solid black;
+        display: block;
+    }
+    .divclass5{
+        width:2in;
+        border: 1px solid black;
+        display: inline-block;
+        /* visibility: hidden; */
+    }
+    .divclass4{
+        width:2in;
+        border: 1px solid black;
+        /* display: block; */
+        visibility: hidden;
+    }
+</style>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- important rule in css -->
+<!-- property defined as important overides other property -->
+<html>
+    <head></head>
+    <body>
+        <div class="div_example1">
+            <div class="box1"> Box 1</div>
+            <div class="box2">Box 2</div>
+            <div class="box3"> Box 3</div>
+        </div>
+        <hr>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    .div_example1{
+        background-color: red !important;
+        background-color: yellow;
+        display: inline-block;
+        text-align: center;
+    }
+    .box1{
+        display: inline-block;
+        background-color: lightcoral !important;
+        height: 1in;
+        width: 1in;
+        text-align: right !important;
+    }
+    .box2{
+        height: 1in;
+        width: 1in;
+        display: inline-block;
+    }
+    .box3{
+        background-color: aqua !important;
+        height: 1in;
+        width: 1in;
+        display: inline-block;
+    }
+</style>

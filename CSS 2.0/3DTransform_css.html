@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 3D Animation in css -->
+<!-- in 3d Animation only rotation is there -->
+<html>
+    <head></head>
+    <body>
+        <div class="box1">
+            <p>box no1</p>
+        </div>
+        <br>
+        <div class="box2">
+            <p>box no2</p>
+        </div>
+        <br>
+        <div class="box3">
+            <p>box no3</p>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    .box1,.box2,.box3{
+        height: 1in;
+        width: 1in;
+        background-color: antiquewhite;
+        color: red;
+        border: 1px solid black;
+    }
+    p{
+        padding-top: 20px;
+        padding-left: 15px;
+    }
+    .box1:hover{
+        transform: rotateX('120deg');
+        background-color: aqua;
+    }
+    .box2:hover{
+        transform: rotateY('30deg');
+        background-color: aqua;
+    }
+    .box3:hover{
+        transform: rotateZ('180deg');
+        background-color: aqua;
+    }
+</style>

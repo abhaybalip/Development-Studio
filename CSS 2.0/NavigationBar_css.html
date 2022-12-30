@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Naviagtion bar in css -->
+<html>
+    <head></head>
+    <body>
+        Navgation Bar : <br>
+        button with hover effect : <br>
+        <hr>
+        <div class="div_bar">
+            <div id="menuopt" class="div_home"><input type="button" value="Home" id="menuopt"></div>
+            <div id="menuopt" class="div_next"><input type="button" value="Prev" id="menuopt"></div>
+            <div id="menuopt" class="div_prev"><input type="button" value="Next" id="menuopt"></div>
+        </div>  
+    </body>
+</html>
+<!-- css part -->
+<style>
+    #menuopt{
+        height:30px;
+        width: 75px;
+        background-color: lightgrey;
+        border:1 px solid black;
+        display: inline-block;
+        font-size: larger;
+    }
+    .div_bar{
+        display: inline;
+        position: fixed;
+    }
+    #menuopt:hover{
+        background-color: grey;
+    }
+</style>

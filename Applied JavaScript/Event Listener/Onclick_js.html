@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!----> click event in js -->
+<html>
+    <head></head>
+    <body>
+        <input type="button" value="button" onclick="fcn()">
+        <p id="p1"></p>
+        <br>
+        <input type="button" value="button 2" onclick="fcn2()">
+        <p id="p2"></p>
+        <p id="p3"></p>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    #p3{
+        height: 1in;
+        width: 1in;
+        background-repeat: no-repeat;
+        background-size: 1in;
+    }
+</style>
+<!-- javascript part -->
+<script>
+    function fcn(){
+        document.getElementById("p1").innerHTML = "Button Clicked !";
+        document.getElementById("p1").style.backgroundColor = "black";
+        document.getElementById("p1").style.color = "red";
+    }
+    function fcn2(){
+        document.getElementById("p2").innerHTML = "second button clicked <br>";
+        document.getElementById("p2").style.color = "blue";
+        document.getElementById("p3").style.backgroundImage = "url(https://user-images.githubusercontent.com/110547037/206418290-d5868c7a-31d8-4009-92a3-c3a94f43fd32.png)";
+        document.getElementById("p3").style.border = "1px solid black";
+    }
+</script>

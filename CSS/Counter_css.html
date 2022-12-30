@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- counter in css -->
+<html>
+    <head></head>
+    <body>
+        <pre>
+            CSS counters are "variables" maintained by CSS whose values can be incremented by CSS rules 
+            (to track how many times they are used). 
+            Counters let you adjust the appearance of content based on its placement in the document.
+
+To work with CSS counters we will use the following properties:
+
+counter-reset - Creates or resets a counter
+counter-increment - Increments a counter value
+content - Inserts generated content
+counter() or counters() function - Adds the value of a counter to an element
+        </pre>
+
+        counter example : <br>
+        <h1>Programming languages :</h1>
+        <h2>C language</h2>
+        <h2>Java language</h2>
+        <h2>python language</h2>
+        <h2>rust language</h2>
+        <h2>Cjong language</h2>
+        <hr>
+        Nested Counter : <br>
+        <ol>
+            <ul>
+                <h5>List of Company</h5>
+                <li>Microsoft</li>
+                <li>Apple</li>
+                <li>Google</li>
+                <li>Samsung</li>
+                <li>Intel</li>
+            </ul>
+            <ul>
+                <h5>List of Country</h5>
+                <li>India</li>
+                <li>USA</li>
+                <li>Japan</li>
+                <li>Russia</li>
+                <li>China</li>
+            </ul>
+        </ol>
+        <hr>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    /* first example */
+    h1{
+        counter-reset: section;
+    }
+    h2::before{
+        counter-increment:section;
+        content:counter(section) " : " ;
+    }
+
+    /* second example - Nested counter */
+    ol{
+        counter-reset: head;
+
+    }
+    ul::before{
+        counter-increment: head;
+        content: counter(head) " list : ";
+    }
+    ul{
+        counter-reset: subhead;
+    }
+    li::before{
+        counter-increment: subhead;
+        content:counter(subhead)" ";
+    }
+</style>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- Event Listener using java script -->
+<html>
+    <head></head>
+    <body>
+        Example of click event : <br>
+        <input type="button" value="Click It !" id="btn1">
+        <p id="p1"></p>
+        <br>
+        <input type="button" value="Don't Click !" id="btn2">
+        <p id="p2"></p>
+    </body>
+</html>
+<script>
+    document.getElementById("btn1").addEventListener("click",fcn1);
+    function fcn1(){
+        document.getElementById("p1").innerHTML = "button clicked !";
+    }
+    document.getElementById("btn2").addEventListener("click",function(){document.getElementById("p2").innerHTML="Said not to click !"});
+</script>

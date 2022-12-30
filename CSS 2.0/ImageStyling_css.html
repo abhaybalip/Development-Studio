@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- Image Decoration in css -->
+<html>
+    <head></head>
+    <body>
+        Image Styling : <br><br>
+        Normal Image <br>
+        <img src="https://th.bing.com/th?q=HTML+CSS+Image&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+        alt="WebDev" id="img1">
+        <br>
+        Padding and Border Radius <br>
+        <img src="https://th.bing.com/th?q=HTML+CSS+Image&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+        alt="WebDev" id="img2">
+        <br>
+        Hover Effect <br>
+        <img src="https://th.bing.com/th?q=HTML+CSS+Image&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+        alt="WebDev" id="img3">
+        <br>
+        Transparency Effect <br>
+        <img src="https://th.bing.com/th?q=HTML+CSS+Image&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+        alt="WebDev" id="img4">
+        <br>
+        Image Detail <br>
+        <div class="outerbox">
+            <img src="https://th.bing.com/th?q=HTML+CSS+Image&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+            alt="WebDev" id="img5">
+            <div class="text">Web Developement</div>
+        </div>
+        <br>
+        Image Filtering - grayscale <br>
+        <img src="https://th.bing.com/th?q=HTML+CSS+Image&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+        alt="WebDev" id="img6">
+        <br>
+        Image Overlaying <br>
+
+        <div class="div_outer">
+            <img src="https://www.w3schools.com/w3css/img_avatar3.png" 
+            alt="Profile" id="img7">
+            <div class="div_inner"><p style="color: red;">Profile</p></div>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    img{
+        height: 2in;
+        width: 2in;
+        border: 1px solid black;
+    }
+    #img1{
+        border-radius: 50%;
+    }
+    #img2{
+        padding: 5px;
+        border-radius: 5px;
+    }
+    #img3:hover{
+        box-shadow: 0 0 2px 3px red;
+    }
+    #img4{
+        opacity: 0.65;
+    }
+    .outerbox{
+        height: 2.5in;
+        width: 2in;
+        background-color: lightgrey;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: block;
+    }
+    #img5{
+        border-radius: 5px;
+    }
+    .text{
+        font-size: large;
+        text-align: center;
+    }
+    .outerbox:hover{
+        box-shadow: 0 0 0 2px violet;
+    }
+
+    #img6{
+        filter:grayscale(50%);
+    }
+
+    .div_outer{
+        height: 3in;
+        width: 2.5in;
+        border: 1px solid black;
+        background-color: grey;
+        position: relative;
+    }
+    #img7{
+        height: 3in;
+        width: 2.5in;
+    }
+    .div_inner{
+        height: 3in;
+        width: 2.5in;
+        background-color: lightblue;
+        font-size: larger;
+        position: absolute;
+        left: 1px;
+        top: 0px;
+        text-align: center;
+        visibility: hidden;
+        display: flex;
+    }
+    .div_outer:hover .div_inner{
+        visibility: visible;
+    }
+</style>

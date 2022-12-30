@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- Data Arrangement in html page -->
+<!-- table content  - row , heading , data -->
+<!-- table property - caption ,col group -->
+<!-- table parts - thead , tbody , tfoot -->
+<html>
+    <head>
+    </head>
+    <body>
+        Listing in html :
+        <br>
+        Un Ordered List
+        <br>
+        Fruit List 
+        <br>
+        <ul>
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Guava</li>
+            <li>Grape</li>
+        </ul>
+        <ul id="ul2">
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Guava</li>
+            <li>Grape</li>
+        </ul>
+        <style>
+            #ul2{
+                list-style-type:circle;
+            }
+            dd{
+                list-style-type: disc;
+                color: red;
+            }
+        </style>
+        Ordered List : 
+        <br>
+        <ol type="A">
+            <li>Lion</li>
+            <li>Tiger</li>
+            <li>Chitah</li>
+            <li>Elephant</li>
+            <li>Giraff</li>
+        </ol>
+        Description list :
+        <br>
+        <dl id="dl1">
+            <dt>Coffee</dt>
+            <dd>Hot or Cold Coffee</dd>
+            <dt>Tea</dt>
+            <dd>Masala or Normal Tea</dd>
+            <dt>Drink</dt>
+            <dd>Fruit Juice or cold Drink</dd>
+        </dl>
+
+        Table in html :
+        <br>
+        table example 1 :
+        <br>
+        <table>
+            <tr>
+                <th>RollNo</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Daji</td>
+                <td>#</td>
+                <td>*</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Rohit</td>
+                <td>#</td>
+                <td>*</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Abhay</td>
+                <td>#</td>
+                <td>*</td>
+            </tr>
+        </table>
+        <br>
+        table example 2 :
+        <br>
+        <table id="t2">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Daji</td>
+                    <td>***</td>
+                    <td>***</td>
+                </tr>
+                <tr>
+                    <td>Rohit</td>
+                    <td>***</td>
+                    <td>***</td>
+                </tr>
+                <tr>
+                    <td>Abhay</td>
+                    <td>***</td>
+                    <td>***</td>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </body>
+    <!-- style sheet for decoration -->
+    <style>
+        #t2{
+            color: red;
+            border: 1px;
+            border-style: dashed;
+            border-color: black;
+        }
+        #t3,th{
+            color: blue;
+            border: 1px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+    <br><br>
+    table example 3 :
+    <br>
+    <table id="t3">
+        <thead style="width:100%;">
+            <tr>
+                <th style="width:30%">Name</th>
+                <th style="width:30%">SurName</th>
+                <th style="width:10%">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Daji</td>
+                <td>Adelkar</td>
+                <td>@</td>
+            </tr>
+            <tr>
+                <td>Rohit</td>
+                <td>Baing</td>
+                <td>@</td>
+            </tr>
+            <tr>
+                <td>Abhay</td>
+                <td>Balip</td>
+                <td>@</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    table example 4 :
+    <br>
+    <table>
+        <colgroup>
+            <col span="3" style="background-color:lightgreen;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Daji Adelkar</td>
+                <td>#</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Rohit Baing</td>
+                <td>#</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Abhay Balip</td>
+                <td>#</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+</html>

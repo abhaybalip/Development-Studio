@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Event Listener using java script -->
+<html>
+    <head></head>
+    <body>
+        Example of Double click event : <br>
+        <input type="button" value="double click" ondblclick="fcn()">
+        <br>
+        <img id="img1" src="" alt="img"
+        id="img1">
+        <br>
+        <input type="button" id="btn2" value="test" ondblclick="fcn2()">
+        <br>
+        <p id="p1"></p>
+    </body>
+</html>
+<style>
+    #img1{
+      height: 2in;
+      width: 2in;  
+    }
+    #p1{
+        visibility: none;
+    }
+</style>
+<script>
+    function fcn(){
+        document.getElementById("img1").setAttribute("src","https://user-images.githubusercontent.com/110547037/206417829-aabbe0be-6e57-4fbc-922d-9c89784eb8a0.png");   
+    }
+    function fcn2(){
+        document.getElementById("p1").innerHTML = "Double click is working";
+    }
+</script>

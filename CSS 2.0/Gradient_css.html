@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- gradient color using css -->
+<html>
+    <head></head>
+    <body>
+        <div class="maindiv1" style="display: inline-block;">
+            <div class="div1">
+                Box 1
+            </div>
+            <div class="div2">
+                Box 2
+            </div>
+            <div class="div3">
+                Box 3
+            </div>
+        </div>
+        <hr>
+        <div class="maindiv2" style="display: inline-block;">
+            <div class="div4">
+                Box 4
+            </div>
+            <div class="div5">
+                Box 5
+            </div>
+            <div class="div6">
+                Box 6
+            </div>
+        </div>
+        <hr>
+        <div class="maindiv3" style="display: inline-block;">
+            <div class="div7">
+                Box 7
+            </div>
+            <div class="div8">
+                Box 8
+            </div>
+            <div class="div9">
+                Box 9
+            </div>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    /* linear gradient */
+    body{
+        /* background-image: linear-gradient(to bottom ,red , yellow); */
+        background-repeat: no-repeat;
+    }
+    .div1{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display: inline-block;
+        background-image: linear-gradient(to bottom ,lightgreen , lightyellow);
+    }
+    .div2{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display:  inline-block;
+        background-image: linear-gradient(to right ,orange , hotpink);
+    }
+    .div3{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display:  inline-block;
+        background-image: linear-gradient(to left ,lightblue , violet);
+    }
+    /* radial gradient */
+    .div6{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display:  inline-block;
+        background-image: radial-gradient(circle ,violet , blue , black 90%);
+    }
+    .div5{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display:  inline-block;
+        background-image: radial-gradient(circle ,pink, orange , lightblue 80%);
+    }
+    .div4{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display:  inline-block;
+        background-image: radial-gradient(circle ,red , yellow , green);
+    }
+    /* conical gradient */
+    .div7{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display: inline-block;
+        background-image: conic-gradient(red, yellow, green);    
+    }
+    .div8{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display: inline-block;
+        background-image: conic-gradient(rgb(219, 206, 71) 0deg, rgb(219, 206, 71) 180deg, purple 180deg, purple 270deg, blue 270deg , blue 360deg);    
+    }
+    .div9{
+        height: 1in;
+        width: 1in;
+        border: 1px solid black;
+        display: inline-block;
+        background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+        border-radius: 50%;
+    }
+</style>

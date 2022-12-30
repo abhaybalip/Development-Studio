@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        Welcome ! <br>
+        <input type="button" value="Open_Timer" onclick="fcn()">
+    </body>
+</html>
+<!-- js part -->
+<script>
+    function fcn(){ 
+        setTimeout(2000,fcn2());
+    }
+    function fcn2(){
+        document.write("function executed after 2sec");
+    }
+</script>

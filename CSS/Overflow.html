@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- overflow with css -->
+<html>
+    <head></head>
+    <body>
+        Overflow : <br>
+        The overflow property specifies whether to clip the content or to add scrollbars <br>
+        when the content of an element is too big to fit in the specified area. <br>
+        <pre>The overflow property has the following values:
+
+            visible - Default. The overflow is not clipped. The content renders outside the element's box
+            hidden - The overflow is clipped, and the rest of the content will be invisible
+            scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+            auto - Similar to scroll, but it adds scrollbars only when necessary
+            </pre>
+        example : <br>
+        Overflow Scroll <br>
+        <div class="divclass1">
+            This is first division <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+        </div>
+        <br>
+        overflow hidden <br>
+        <div class="divclass2">
+            This is second division <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+        </div>
+        <br>
+        overflow visible <br>
+        <div class="divclass3">
+            This is third division <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+        </div>
+        <br>
+        overflow auto <br>
+        <div class="divclass4">
+            This is fourth division <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+            * <br>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    .divclass1{
+        height:75px;
+        width:auto;
+        border: 1px solid black;
+        overflow: scroll;
+    }
+    .divclass2{
+        height:75px;
+        width:auto;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    .divclass3{
+        height:75px;
+        width:auto;
+        border: 1px solid black;
+        overflow: visible;
+    }
+    .divclass4{
+        height:75px;
+        width:auto;
+        border: 1px solid black;
+        overflow: auto;
+    }
+</style>

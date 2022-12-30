@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <pre>
+        Animation fill mode :
+        none - Default value. Animation will not apply any styles to the element before or after it is executing
+forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
+    </pre>
+    <body>
+        <p>Forward fill mode</p>
+        <div class="div1"></div>
+        <br>
+        <p>Backward fill mode</p>
+        <div class="div3"></div>
+        <br>
+        <div class="div2"></div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: grey;
+        border: 1px solid black;
+        border-radius: 50%;
+        position: relative;
+    }
+    .div1{
+        animation-name: sample1;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes sample1{
+        from{
+            background-color: grey;
+            left: 0px;
+        }
+        to{
+            background-color: aliceblue;
+            left: 250px;
+        }
+    }
+    .div3{
+        animation-name: sample3;
+        animation-duration: 5s;
+        animation-fill-mode: backwards;
+    }
+    @keyframes sample3{
+        from{
+            background-color: grey;
+            left: 0px;
+        }
+        to{
+            background-color: aliceblue;
+            left: 250px;
+        }
+    }
+    .div2{
+        animation-name: sample2;
+        animation-duration: 5s;
+        
+        animation-fill-mode: backwards;
+
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+    @keyframes sample2{
+        from{
+            background-color: orchid;
+            left: 0px;
+        }
+        to{
+            background-color: orange;
+            left: 250px;
+        }
+    }
+</style>

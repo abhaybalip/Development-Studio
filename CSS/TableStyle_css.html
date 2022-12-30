@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        Table : <br>
+        <div>
+            <table style="max-width: 50%;">
+                <thead>
+                    <tr>
+                        <th style="width:6%;">No</th>
+                        <th style="width:22%;">Country</th>
+                        <th style="width:22%;">Capital</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>India</td>
+                        <td>Delhi</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>USA</td>
+                        <td>NewYork</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Pakistan</td>
+                        <td>Lahore</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Russia</td>
+                        <td>Moscow</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Ukraine</td>
+                        <td>Keive</td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>China</td>
+                        <td>Beijing</td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>Japan</td>
+                        <td>Tokyo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    table{
+        background-color: rgb(235, 247, 246);
+        font-size: large;
+        text-align: center;
+        border:2px dashed black;
+        outline: 1px solid yellow;
+    }
+    thead{
+        color: red;
+        background-color: rgb(241, 241, 231);
+        font-size: larger;
+    }
+    /* hover applied when curser is on elemennt */
+    tr:hover{
+        background-color: lightblue;
+    }
+    tr:nth-child(even){
+        background-color: lightgoldenrodyellow;
+    }
+    th,td{
+        border-bottom: 1px solid black;
+    }
+</style>

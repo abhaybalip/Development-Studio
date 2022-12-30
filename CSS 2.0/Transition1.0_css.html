@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Transition in css -->
+<html>
+    <head></head>
+    <body>
+        Transition in css : <br>
+        <pre>
+            CSS transitions allows you to change property values smoothly, over a given duration.
+            To create a transition effect, you must specify two things:
+
+the CSS property you want to add an effect to
+the duration of the effect
+Note: If the duration part is not specified, the transition will have no effect, because the default value is 0.
+        </pre>
+        <br>
+        transition of width : <br>
+        <div class="div_exp1">
+            <p>Box 1</p>
+        </div>
+        <br>
+        <div class="div_exp2">
+            <p>Box 2</p>
+        </div>
+        <br>
+        transition of width height and background-color : <br>
+        <div class="div_exp3">
+            <p>Box 1</p>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    .div_exp1,.div_exp2{
+        color: red;
+        background-color: lightcyan;
+        border: 1px solid black;
+        height: 0.5in;
+        width: 0.5in;
+        transition: width 1s;
+    }
+    p{
+        padding-left: 5px;
+    }
+    .div_exp1:hover{
+        width: 2in;
+    }
+    .div_exp2:hover{
+        width: 5in;
+    }
+    .div_exp3{
+        height: 0.5in;
+        width: 0.5in;
+        background-color: rgb(21, 254, 0);
+        color: white;
+        border: 1px solid black;
+        transition: width 1s, height 1s, background-color 1s;
+    }
+    .div_exp3:hover{
+        width: 2in;
+        height: 2in;
+        background-color: rgb(255, 102, 0);
+    }
+</style>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Define tool tip using css -->
+<html>
+    <head></head>
+    <body>
+        Tool tip example : <br><br>
+        <div style="display: inline;">
+            <div class="outerbox">
+                Box
+                <div class="innerbox">Empty Box !</div>
+            </div>
+            <div class="outerbox">
+                Box
+                <div class="innerbox">Empty Box !</div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    .innerbox{
+        height: auto;
+        width: auto;
+        border: 1px solid black;
+        font-size: small;
+        display: inline;
+        visibility: hidden;
+        position: absolute;
+        top: 50px;
+        left: 75px;
+    }
+    .outerbox{
+        height: 50px;
+        width: 75px;
+        text-align: center;
+        border: 1px solid black;
+        display: inline-block;
+        background-color: rgb(170, 154, 154);
+        position: relative;
+        border-radius: 15%;
+    }
+    .outerbox:hover .innerbox{
+        visibility: visible;
+    }
+</style>

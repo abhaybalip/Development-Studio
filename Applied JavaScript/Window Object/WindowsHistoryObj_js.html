@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        Welcome ! <br>
+        <input type="button" value="Prev_Page" onclick="fcn1()">
+        <input type="button" value="Go" onclick="fcn3()">
+        <input type="button" value="Next_Page" onclick="fcn2()">
+        <br><br>
+        <input type="button" value="2 step back" onclick="fcn4()">
+        <input type="button" value="2 step forth" onclick="fcn5()">
+    </body>
+</html>
+<!-- js part -->
+<script>
+    function fcn1(){
+        window.history.back();
+    }
+    function fcn2(){
+        window.history.forward();
+    }
+    function fcn3(){
+        window.history.go();
+    }
+    function fcn4(){
+        window.history.go(-2);
+    }
+    function fcn5(){
+        window.history.go(+2);
+    }
+</script>

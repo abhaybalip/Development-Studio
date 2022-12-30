@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Transition in CSS -->
+<html>
+    <head></head>
+    <body>
+            The transition-timing-function property specifies the speed curve of the transition effect.
+            The transition-timing-function property can have the following values: <br>
+            <dl>
+                <li>ease</li>
+                <dd>ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</dd>
+                <li>linear</li>
+                <dd>linear - specifies a transition effect with the same speed from start to end</dd>
+                <li>ease-in</li>
+                <dd>ease-in - specifies a transition effect with a slow start</dd>
+                <li>ease-out</li>
+                <dd>ease-out - specifies a transition effect with a slow end</dd>
+                <li>ease-in-out</li>
+                <dd>ease-in-out - specifies a transition effect with a slow start and end</dd>
+                <li>cubic-bazier(n,n,n,n)</li>
+                <dd>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</dd>
+            </dl>
+        <hr>
+        Linear Exmaple : <br>
+        <div class="div_exp1">
+            Box 1
+        </div>
+        <br>
+        ease-in example : <br>
+        <div class="div_exp2">
+            Box 1
+        </div>
+        <br>
+        ease-out example : <br>
+        <div class="div_exp3">
+            Box 1
+        </div>
+        <br>
+        ease-in-out example : <br>
+        <div class="div_exp4">
+            Box 1
+        </div>
+        <br>
+        cubic-bazier example : <br>
+        <div class="div_exp5">
+            Box 1
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    dl{
+        list-style-type: circle;
+    }
+    .div_exp1,.div_exp2,.div_exp3,.div_exp4,.div_exp5{
+        height: 1in;
+        width: 1in;
+        background-color: lightblue;
+        border:1px solid black;
+        /* transition-delay: 1000ms; */
+        transition: width 100ms,/*height 100ms,*/background-color 500ms;
+    }
+    .div_exp1:hover{
+        background-color: rgb(255, 94, 0);
+        /* height: 2in; */
+        width: 7in;
+        transition-timing-function: linear;
+    }
+    .div_exp2:hover{
+        background-color: rgb(6, 255, 2);
+        /* height: 2in; */
+        width: 6in;
+        transition-timing-function: ease-in;
+    }
+    .div_exp3:hover{
+        background-color: rgb(246, 255, 0);
+        /* height: 2in; */
+        width: 5in;
+        transition-timing-function: ease-out;
+    }
+    .div_exp4:hover{
+        background-color: rgb(0, 255, 255);
+        /* height: 2in; */
+        width: 4in;
+        transition-timing-function: ease-in-out;
+    }
+    .div_exp5:hover{
+        background-color: rgb(255, 0, 187);
+        /* height: 2in; */
+        width: 3in;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+</style>

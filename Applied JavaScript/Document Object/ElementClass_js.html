@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id="div1">This is pagaragraph</p>
+        <br>
+        <p class="p1">class p1 object 1</p>
+        <p class="p1">class p1 object 2</p>
+    </body>
+</html>
+<!-- css part -->
+<style></style>
+<!-- js part -->
+<script>
+    function pritnln(params){
+        document.write(params+"<br>");
+    }
+    var d1 = document.getElementsByClassName("div1");
+    document.write("Hello World<br>Text written by script")
+
+    pritnln("content of div element : ");
+    pritnln(d1);
+    pritnln("<hr>");
+    var p = document.getElementsByClassName("p1");
+    pritnln("p1 class objects >>");
+    pritnln(p);
+</script>

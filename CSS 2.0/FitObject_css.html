@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Object fitting using css -->
+<html>
+    <head></head>
+    <body>
+        <pre>
+The CSS object-fit property is used to specify how an img or video should be resized to fit its container.
+<dl>
+<li>fill</li> 
+<dd>contain - The image keeps its aspect ratio, but is resized to fit within the given dimension</dd>
+<li>cover</li>
+<dd>The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit</dd>
+<li>none</li>
+<dd>The image is not resized</dd>
+<li>scale-down</li>
+<dd>scale-down - the image is scaled down to the smallest version of none or contain</dd>
+</dl>
+
+The CSS object-position property is used to specify how an img or video should be positioned within its container.
+specify x and y axis proposition
+        </pre>
+        Example : <br>
+        <div class="div1">
+            <img src="https://th.bing.com/th?q=Web+Search&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+            alt="WebDev" class="div1">
+        </div>
+        <div class="div2">
+            <img src="https://th.bing.com/th?q=Web+Search&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+            alt="WebDev" class="div2">
+        </div>
+        <div class="div3">
+            <img src="https://th.bing.com/th?q=Web+Search&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+            alt="WebDev" class="div3">
+        </div>
+        <div class="div4">
+            <img src="https://th.bing.com/th?q=Web+Search&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" 
+            alt="WebDev" class="div4">
+        </div>
+        <br>
+        <div class="div5">
+            <img src="https://th.bing.com/th/id/OIP.K9T7vOdsAZmGgFgEBqviagAAAA?w=224&h=158&c=7&r=0&o=5&dpr=1.3&pid=1.7" 
+            alt="obj" class="div5">
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    div{
+        height: 3in;
+        width: 2.5in;
+        border: 1px solid black;
+        background-color: grey;
+        display: inline-block;
+    }
+    img{
+        height: 3in;
+        width: 2.5in;
+    }
+    img.div1{
+        object-fit: none;
+    }
+    img.div2{
+        object-fit: fill;
+    }
+    img.div3{
+        object-fit: cover;
+    }
+    img.div4{
+        object-fit:scale-down;
+    }
+
+    img.div5{
+        object-fit: cover;
+        object-position: 100% 25%;
+    }
+</style>

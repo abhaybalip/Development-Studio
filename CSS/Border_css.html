@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- border in css -->
+<html>
+    <head></head>
+    <body>
+        This is body of html <br>
+        css can definr border of many types <br>
+        border is applied for element body <br>
+        <br>
+        <div id="divid1">
+            This is First Division <br>
+            font size normal <br>
+            color green <br>
+            border style dotted solid <br>
+            border color blue <br>
+        </div>
+        <br><br>
+        <div id="divid2">
+            Example of table : <br>
+            <table style="size: 100%;" id="tableid1">
+                <thead>
+                    <tr>
+                        <th style="size:10%">No</th>
+                        <th style="size:25%">Emoji</th>
+                        <th style="size:50%">Description</th>
+                    </tr>
+                </thead>
+                <tbody style="border: 1px;border-style:solid">
+                    <tr>
+                        <td>1</td>
+                        <td>&#128516;</td>
+                        <td>Happy</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>&#128524;</td>
+                        <td>Peace</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>&#128518;</td>
+                        <td>Laughter</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&#128519;</td>
+                        <td>Welcome</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>&#128523;</td>
+                        <td>Yummy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
+<!-- css part -->
+<style>
+    body{
+        height: auto;
+        width: auto;
+        border: 1px;
+        border-style:  solid;
+        border-color: black;
+        color : red;
+    }
+    /* shorthanding example */
+    #divid1{
+        background-color: lightyellow;
+        height: auto;
+        width: auto;
+        color: green;
+        border: 2px dashed blue;
+    }
+    #divid2{
+        height: auto;
+        width: auto;
+        color: black;
+        border: 2px dotted;
+    }
+    #tableid1,th,td{
+        border: 1px solid;
+        background-color: antiquewhite;
+    }
+</style>
