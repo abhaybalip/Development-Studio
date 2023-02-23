@@ -1,0 +1,32 @@
+<!-- Element Properties -->
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id="p1"></p>
+        <br>
+        <p id="p2">This is second paragraph</p>
+        <br>
+        <p id="p3">This is third paragraph</p>
+    </body>
+</html>
+<script>
+    var p1 = document.getElementById('p1')
+    p2 = document.getElementById('p2')
+    p3 = document.getElementById('p3')
+
+    // change html property
+    p1.innerHTML = 'This is First paragraph'
+
+    // change css property
+    p2.style.color = 'red';
+    p2.style.fontSize = 'x-large';
+    p3.style.backgroundColor  = 'yellow';
+
+    // select property
+    str1 = p1.innerHTML
+    console.log(str1)
+
+    clr1 = p2.color
+    console.log(clr1)
+</script>

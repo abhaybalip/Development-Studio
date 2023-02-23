@@ -1,0 +1,38 @@
+<!-- Finding Element -->
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        # document object contains all element <br>
+        get element type methode are used to select element or class <br>
+        inner html is used to change html properties <br>
+        
+        <pre></pre>
+        <br>
+        <p id="p1"></p>
+        <br>
+        <p id="p2"></p>
+        <br>
+        <p class="p2"></p>
+        <br>
+        <img src="" alt="img" id="img1">
+    </body>
+</html>
+<script>
+    // search element by id
+    document.getElementById('p1').innerHTML = 'Hello <br> edited by script.'
+
+    // store reference in variable
+    var para = document.getElementById('p2')
+    para.innerHTML = para
+
+    // search element by tag name
+    p = document.getElementsByTagName('pre')
+    console.log(p)
+    p[0].innerHTML = 'element/s search by tag name'
+
+    // search element by class as object with multiple data
+    var p2 = document.getElementsByClassName('p2')
+    p2[0].innerHTML = "hi <br>object of class p2 : "
+
+</script>

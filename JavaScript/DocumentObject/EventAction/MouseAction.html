@@ -1,0 +1,39 @@
+<!-- Event Action -->
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        Mouse click action : 
+        <p id="p1" style="height:1in;width:1in;border:1px solid black;"onclick='action1()'></p>
+        <br>
+        Mouse Up and Down action Click On/Off :
+        <p id="p2" style="height:1in;width:1in;border:1px solid black;"onmousedown='action2()' onmouseup='action3()'></p>
+        <br>
+        Mouse over out action Hover On/Off :
+        <p id="p3" style="height:1in;width:1in;border:1px solid black;"onmouseover='action4()' onmouseout='action5()'></p>
+    </body>
+</html>
+<script>
+    p1 = document.getElementById('p1')
+    p2 = document.getElementById('p2')
+    p3 = document.getElementById('p3')
+
+    function action1(){
+        p1.style.backgroundColor = 'red';
+        p1.innerHTML = 'Mouse Overed';
+    }
+    function action2(){
+        p2.innerHTML = 'Mouse On'
+        p2.style.backgroundColor = ''
+    }
+    function action3(){
+        p2.innerHTML = 'Mouse Off'
+        p2.style.backgroundColor = 'yellow'
+    }
+    function action4(){
+        p3.innerHTML = 'Mouser Over'
+    }
+    function action5(){
+        p3.innerHTML = 'Mouse Out'
+    }
+</script>

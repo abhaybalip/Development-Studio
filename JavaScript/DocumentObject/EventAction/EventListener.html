@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        click action : <br>
+        <p id="p1" style="height:1in;width:1in;border:1px solid black;"></p>
+        <br><br>
+        mouse over out action : <br>
+        <p id="p2" style="height:1in;width:1in;border:1px solid black;"></p>
+        <br><br>
+        Mouse up down action : <br>
+        <p id="p3" style="height:1in;width:1in;border:1px solid black;"></p>
+    </body>
+</html>
+<script>
+    p1 = document.getElementById('p1')
+    p2 = document.getElementById('p2')
+    p3 = document.getElementById('p3')
+
+    p1.addEventListener('click',action1);
+    p1.count = 0
+    function action1(){
+        p1.count += 1
+        p1.innerHTML = 'count = '+p1.count;
+    }
+
+    p2.addEventListener('mouseover',action2)
+    p2.addEventListener('mouseout',action3)
+    function action2(){
+        p2.style.backgroundColor = 'red'
+    }
+    function action3(){
+        p2.style.backgroundColor = 'hotpink'
+    }
+
+    p3.addEventListener('mouseup',action4)
+    p3.addEventListener('mousedown',action5)
+    function action4(){
+        p3.innerHTML = 'un clicked'
+    }
+    function action5(){
+        p3.innerHTML = 'clicked'
+    }
+</script>
