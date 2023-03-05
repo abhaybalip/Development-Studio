@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id="p1"></p>
+        <br>
+        <p id="p2">
+            <button onclick="fcn()">click to remove </button>
+        </p>
+        <br>
+        <p id="p3">
+            <button onclick="fcn2()">click to remove</button>
+            <br>
+            <img id="img1" src="" alt="image">
+        </p>
+        <br>
+        <p id="p4">
+            <button onclick="fcn3()">click to replace</button>
+            <br>
+            <img id='img2'src="" alt="img">
+            <br>
+            <div id="div1">division</div>
+        </p>
+    </body>
+</html>
+<style></style>
+<script>
+    // Insert new element
+    i1 = document.createElement('img')
+    console.log(typeof(i1))
+
+
+    // create text block
+    txt = document.createTextNode('This is a node created by script !')
+    txt2 = document.createTextNode('This is second node ! \n')
+
+    // insert block to element
+    e = document.getElementById('p1')
+    e.appendChild(txt)
+    e.insertBefore(txt2,txt)
+
+    function fcn(){
+        e2 = document.getElementById('p2')
+        e2.remove('button')
+    }
+
+    function fcn2(){
+        e3 = document.getElementById('p3')
+        i = document.getElementById('img1')
+        e3.removeChild(i);
+    }
+
+    function fcn3(){
+        e4 = document.getElementById('p4')
+        i = document.getElementById('img2')
+        i2 = document.getElementById('div1')
+        e4.replaceChild(i,i2)
+    }
+</script>
+<!-- remove remove child replace child -->
