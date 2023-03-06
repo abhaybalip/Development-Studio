@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button onclick="setInterval(fcn,1000)">timing function effect</button>
+        <br><br>
+        <div id="div"></div>
+        <br><br>
+        <button onclick="v">effect removed</button>
+        <br><br>
+        <div id="div2"></div>
+    </body>
+</html>
+<style>
+    #div,#div2{
+        height: 2in;
+        width: 2in;
+        background-color: none;
+    }
+</style>
+<script>
+    // set timimg effect
+    function fcn(){
+        e = document.getElementById('div')
+        e.style.backgroundColor = 'red'
+    }
+
+    v = setTimeout(fcn2,1000)
+    function fcn2(){
+        e = document.getElementById('div2')
+        e.style.backgroundColor = 'yellow'
+    }
+
+    // remove timing function
+    window.clearTimeout(v)
+</script>

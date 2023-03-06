@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button onclick="fcn()">create cookie</button>
+        <br><br>
+        <button onclick="fcn2()">display cookie</button>
+    </body>
+</html>
+<style></style>
+<script>
+    function fcn(){
+        document.cookie = "username = abhay"
+        let c = document.cookie
+        console.log(c)
+    }
+</script>
