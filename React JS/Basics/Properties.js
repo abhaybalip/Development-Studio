@@ -4,9 +4,17 @@ import './App.css';
 
 
 class App extends React.Component{
+  data = {
+    name : 'NameSurname',
+    age  : 20,
+    prof : 'student'
+  }
   render(){
+    const data = this.data
     return(
-      null
+      <div>
+        {data.name + data.age + data.prof}
+      </div>
     )
   }
 }
