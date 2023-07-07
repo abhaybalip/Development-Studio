@@ -1,28 +1,63 @@
-import React from 'react';
-import { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
+import React, { useEffect, useState } from 'react';
 
-function Timer() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => count + 1);
-    }, 1000);
-  })
-
-  return (<h1>I've rendered {count} times!</h1>)
+const testStye = {
+  'color': 'black',
+  'font-size': 'larger'
 }
 
-class App  extends React.Component{
-    constructor(){
-        super()
-    }
-    render(){
-        return(
-            <Timer />
-        )
-    }
+function Counter() {
+  const [count, setCount] = useState(0)
+
+  useEffect(
+    ()=>{
+      setTimeout(() => {
+        setCount(count+1)
+      },1000)
+    },
+  )
+
+  return(
+    <div id='counter'>
+      render count = {count}
+      <br></br>
+      {/* <button onClick={update}>Increment</button> */}
+      {/* <button onClick={update1}>Decrement</button> */}
+    </div>
+  );
 }
 
+function Counter1() {
+  const [count, setCount] = useState(0)
+
+  useEffect(
+    ()=>{
+      setTimeout(() => {
+        setCount(count+1)
+      },1000)
+    },
+    [count]
+  )
+
+  return(
+    <div id='counter'>
+      render count = {count}
+      <br></br>
+      {/* <button onClick={update}>Increment</button> */}
+      {/* <button onClick={update1}>Decrement</button> */}
+    </div>
+  );
+}
+
+function App() {
+  return(
+    <div id='main' style={testStye}>
+      counter with no dependancy :
+      <Counter />
+      <br/>
+      counter with dependancy :
+      function is executed when dependancy value is changed 
+      <Counter1 />
+    </div>
+  );
+}
 export default App;
