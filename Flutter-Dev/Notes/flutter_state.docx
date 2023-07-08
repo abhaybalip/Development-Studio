@@ -1,0 +1,25 @@
+Flutter State Management :
+
+The widget can be classified into two categories, one is a Stateless widget, and another is a Stateful widget.
+The Stateless widget does not have any internal state. It means once it is built, we cannot change or modify it until they are initialized again.
+On the other hand, a Stateful widget is dynamic and has a state.
+It means we can modify it easily throughout its lifecycle without reinitialized it again.
+
+What is State?
+A state is information that can be read when the widget is built and might change or modified over a lifetime of the app.
+If you want to change your widget, you need to update the state object,
+which can be done by using the setState() function available for Stateful widgets.
+The setState() function allows us to set the properties of the state object that triggers a redraw of the UI.
+
+In Flutter, the state management categorizes into two conceptual types, which are given below:
+    Ephemeral State
+    App State
+
+Ephemeral State
+This state is also known as UI State or local state. It is a type of state which is related to the specific widget,
+or you can say that it is a state that contains in a single widget.
+
+App State
+It is different from the ephemeral state. It is a type of state that we want to share across various parts of our app
+and want to keep between user sessions.
+Thus, this type of state can be used globally. Sometimes it is also known as application state or shared state.

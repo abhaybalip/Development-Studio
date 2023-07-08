@@ -1,0 +1,58 @@
+Flutter Gestures :
+    Gestures are an interesting feature in Flutter that allows us to interact with the mobile app (or any touch-based device).
+    Generally, gestures define any physical action or movement of a user in the intention of specific control of the mobile device.
+
+Flutter divides the gesture system into two different layers, which are given below:
+    Pointers
+    Gestures
+
+Pointers :
+    Pointers are the first layer that represents the raw data about user interaction. It has events,
+    which describe the location and movement of pointers such as touches, mice, and style across the screens.
+    Flutter does not provide any mechanism to cancel or stop the pointer-events from being dispatched further.
+    Flutter provides a Listener widget to listen to the pointer-events directly from the widgets layer.
+    The pointer-events are categories into mainly four types:
+
+        PointerDownEvents: It allows the pointer to contact the screen at a particular location.
+
+        PointerMoveEvents: It allows the pointer to move from one location to another location on the screen.
+
+        PointerUpEvents: It allows the pointer to stop contacting the screen.
+
+        PointerCancelEvents: This event is sent when the pointer interaction is canceled.
+
+Gestures :
+    It is the second layer that represents semantic actions such as tap, drag, and scale,
+    which are recognized from multiple individual pointer events. It is also able to dispatch multiple events corresponding
+    to gesture lifecycle like drag start, drag update, and drag end.
+    Some of the popularly used gesture are listed below:
+        Tap: It means touching the surface of the screen from the fingertip for a short time and then releasing them. This gesture contains the following events:
+            onTapDown
+            onTapUp
+            onTap
+            onTapCancel
+        Double Tap: It is similar to a Tap gesture, but you need to tapping twice in a short time. 
+            This gesture contains the following events:
+            onDoubleTap
+        
+        Drag: It allows us to touch the surface of the screen with a fingertip and move it from one location to another location and then releasing them.
+            Flutter categories the drag into two types:
+
+                Horizontal Drag: This gesture allows the pointer to move in a horizontal direction. It contains the following events:
+                    onHorizontalDragStart
+                    onHorizontalDragUpdate
+                    onHorizontalDragEnd
+                Vertical Drag: This gesture allows the pointer to move in a vertical direction. It contains the following events:
+                    onVerticalDragStart
+                    onVerticalDragStart
+                    onVerticalDragStart
+                Long Press: It means touching the surface of the screen at a particular location for a long time. This gesture contains the following events:
+
+                    onLongPress
+                Pan: It means touching the surface of the screen with a fingertip, which can move in any direction without releasing the fingertip. This gesture contains the following events:
+
+                    onPanStart
+                    onPanUpdate
+                    onPanEnd
+
+                Pinch: It means pinching (move one's finger and thumb or bring them together on a touchscreen) the surface of the screen using two fingers to zoom into or out of a screen.

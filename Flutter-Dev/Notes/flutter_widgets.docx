@@ -1,0 +1,20 @@
+In flutter every object represented widget
+Widgets are nested with each other to build the app. It means the root of your app is itself a widget
+
+types of widget :
+
+    Visible widget :
+        The visible widgets are related to the user input and output data.
+    Invisible widget :
+        The invisible widgets are related to the layout and control of widgets.
+        It provides controlling how the widgets actually behave and how they will look onto the screen.
+
+State Management Widget :
+    In Flutter, there are mainly two types of widget:
+
+    StatelessWidget :
+        The StatelessWidget does not have any state information. It remains static throughout its lifecycle.
+    StatefulWidget : 
+        A StatefulWidget has state information. It contains mainly two classes: the state object and the widget.
+        It is dynamic because it can change the inner data during the widget lifetime. This widget does not have a build() method.
+        It has createState() method, which returns a class that extends the Flutters State Class.
