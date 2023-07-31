@@ -1,44 +1,58 @@
-// React js - Router
-
-import React, { Component } from "react";
-import { Route, BrowserRouter } from "react-router-dom";
-
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div>
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-        </div>
-      </BrowserRouter>
-    );
-  }
+import React from 'react';
+import { BrowserRouter, Routes, Route, Outlet, Link, NavLink } from 'react-router-dom';
+const nav_style = {
+  'list-style-type': 'circle',
+  'display': 'inline-block'
 }
 
-const Home = () => {
-  return (
+export default function App(){
+  return(
     <div>
-      <h1>Home</h1>
+      <div>
+        <ul style={nav_style}>
+          <li>
+            <a href='/'>Home</a>
+          </li>
+          <li>
+            <a href='/About'>About</a>
+          </li>
+          <li>
+            <a href='/Contact'>Contact</a>
+          </li>
+        </ul>
+      </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' Component={Home}></Route>
+        <Route path='/About' Component={About}></Route>
+        <Route path='/Contact' Component={Contact}></Route>
+      </Routes>
+      </BrowserRouter>
+      <Outlet></Outlet>
     </div>
-  );
-};
+  )
+}
 
-const About = () => {
-  return (
+const Home = ()=>{
+  return(
     <div>
-      <h1>About</h1>
+      Home Page
     </div>
-  );
-};
+  )
+}
 
-const Contact = () => {
-  return (
+const About = ()=>{
+  return(
     <div>
-      <h1>Contact</h1>
+      About Page
     </div>
-  );
-};
+  )
+}
 
-export default App;
+const Contact = ()=>{
+  return(
+    <div>
+      Contact Page
+    </div>
+  )
+}
