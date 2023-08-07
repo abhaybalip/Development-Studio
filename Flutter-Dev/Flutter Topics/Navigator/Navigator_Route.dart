@@ -1,100 +1,67 @@
-// Flutter - Navigation : Routes
+// Navigation - Routes
 
 import 'package:flutter/material.dart';
 
 void main(List<String> args) => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'my_flutter_app',
-      initialRoute: '/',
+      title: 'flutter_app',
+      home: HomePage(),
       routes: {
-        '/': (context) => MyHomePage(),
-        '/new_page': (context) => NewPage(),
-        '/new_page1': (context) => NewPage1(),
+        '\\':(context) => const HomePage(),
+        '\\SecondPage':(context) => const SecondPage(),
       },
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/new_page');
-              },
-              child: const Text('New Page'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/new_page1');
-              },
-              child: const Text('New Page 1'),
-            )
-          ],
+      appBar: AppBar(title: Text('Home Page'),),
+      body: Center(
+        child: InkWell(
+          child: Text('SecondPage'),
+          onTap: ()=>{
+            Navigator.pushNamed(context, '\\SecondPage')
+          },
         ),
       ),
     );
   }
 }
 
-class NewPage extends StatelessWidget {
-  const NewPage({Key? key}) : super(key: key);
+class SecondPage extends StatefulWidget {
+  const SecondPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text('New Page'),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('Back'),
-            )
-          ],
-        ),
-      ),
-    );
-  }
+  State<SecondPage> createState() => _SecondPageState();
 }
 
-class NewPage1 extends StatelessWidget {
-  const NewPage1({Key? key}) : super(key: key);
-
+class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text('New Page 1'),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('Back'),
-            )
-          ],
+      appBar: AppBar(title: Text('Second Page'),),
+      body: Center(
+        child: InkWell(
+          child: Text('Back'),
+          onTap: ()=>{
+            Navigator.pop(context)
+          },
         ),
       ),
     );
