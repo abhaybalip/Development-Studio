@@ -1,7 +1,9 @@
 npm install -g create-react-app
 
-create-react-app My_App
+create-react-app app_name
 
-cd My_App
+or
+
+npx create-react-app app_name
 
 npm start

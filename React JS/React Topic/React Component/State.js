@@ -6,25 +6,35 @@ export default App;
 
 function App() {
   return (
-    < Button/>
+    <>
+      <StateTest></StateTest>
+    </>
   )
 }
 
-class Button extends React.Component {
-  state = {
-    color: 'black',
-    height: '5vh',
-    width: '10vh'
-  }
-  clicked(){
-    console.log('Button clicked !')
-    var btn = document.getElementById("button")
-    btn.setAttribute('style', 'color: red;')
+class StateTest extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      count: 0
+    }
   }
   render() {
-    var { color, height, width } = this.state
     return (
-      <button id='button' style={{ color, height, width }} onClick={this.clicked()}>My Button</button>
+      <>
+        <div>count: {this.state.count} <br /></div>
+        <button onClick={() => {
+          this.setState({
+            count: this.prevState.count + 1
+          })
+        }}>Inc</button>
+
+        <button onClick={() => {
+          this.setState({
+            count: this.prevState.count - 1
+          })
+        }}>Dec</button>
+      </>
     )
   }
 }
