@@ -8,14 +8,14 @@ const express = require('express')
 const app = express()
 const router = router1 = express.Router()
 
-router.get('/',(req,res,next)=>{
-    print('router : '+req.url)
+router.get('/', (req, res, next) => {
+    print('router : ' + req.url)
     res.send('connection succesful')
     // res.end()
 })
 
-router1.get('/about',(req,res,next)=>{
-    print('router : '+req.url)
+router1.get('/about', (req, res, next) => {
+    print('router : ' + req.url)
     res.send('connection succesful')
 })
 

@@ -1,7 +1,7 @@
 // Node js - Express js - Json Data
 // json methode used to send data in json format
 
-const print = (params)=> console.log(params)
+const print = (params) => console.log(params)
 const express = require('express')
 
 const app = express()

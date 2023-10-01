@@ -6,18 +6,18 @@ const express = require('express')
 
 const app = express()
 
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 
-app.post('/',(req,res,next)=>{
+app.post('/', (req, res, next) => {
     print('Hi')
     print(req.method)
     // res.end()
 })
 
-app.get('/',(req,res,next)=>{
+app.get('/', (req, res, next) => {
     res.send('connected')
 })
 
-app.listen(8080,(err)=>{
-    if(err) print('error: '+err)
+app.listen(8080, (err) => {
+    if (err) print('error: ' + err)
 })

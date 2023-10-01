@@ -1,20 +1,20 @@
 // Node js - Express js
 
-const print = (data)=> console.log(data)
+const print = (data) => console.log(data)
 const express = require('express')
 
-const app =  express()
+const app = express()
 
-app.get('/',function(req,res,next){
+app.get('/', function (req, res, next) {
     // req app
-    print('req app: \n'+req.app)
+    print('req app: \n' + req.app)
 
     // base url
     print(req.baseUrl)
-  
+
     res.send('connected')
 })
 
-app.listen(8080,function(err){
-    print('error: '+err)
+app.listen(8080, function (err) {
+    print('error: ' + err)
 })

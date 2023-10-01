@@ -1,6 +1,6 @@
 // Node js - Express js - Json Data
 
-const print = (params)=> console.log(params)
+const print = (params) => console.log(params)
 const express = require('express')
 
 const app = express()

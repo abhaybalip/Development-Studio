@@ -1,15 +1,15 @@
 // Node js - Express js
 // delete function used for generating delete req
 
-const print = (data)=> console.log(data)
+const print = (data) => console.log(data)
 const express = require('express')
 
-const app =  express()
+const app = express()
 
-app.delete('/',function(req,res,next){
+app.delete('/', function (req, res, next) {
     res.send('delete request called')
 })
 
-app.listen(8080,function(err){
-    print('error: '+err)
+app.listen(8080, function (err) {
+    print('error: ' + err)
 })

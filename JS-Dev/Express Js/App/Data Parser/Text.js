@@ -10,7 +10,7 @@ const app = express()
 
 // middleware function parses data into text
 app.use(express.text());
- 
+
 app.post('/', function (req, res) {
     res.send(req.body);
     res.end();
