@@ -1,7 +1,6 @@
 // Node js - Express js - url encoding
-
+// access to req.body property
 const print = (params) => console.log(params)
-const index_path = 'C:\\Users\\abhay\\Documents\\code-book\\Node_Env\\index.html'
 
 const express = require('express')
 
@@ -16,7 +15,7 @@ app.post('/',(req,res,next)=>{
 })
 
 app.get('/',(req,res,next)=>{
-    res.sendFile(index_path)
+    res.send('connected')
 })
 
 app.listen(8080,(err)=>{

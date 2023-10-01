@@ -1,7 +1,6 @@
 // Node js - Express js - Mount App
 
 const print = (data) => console.log(data)
-const index_html = 'C:\\Users\\abhay\\Documents\\code-book\\node_env\\index.html'
 
 const express = require('express')
 

@@ -1,14 +1,13 @@
 // Node js - Express js - Static
-// used for file transfering
+// used for serving static files
 
 const print = (params) => console.log(params)
-const index_path = 'C:\\Users\\abhay\\Documents\\code-book\\Node_Env\\index.html'
 
 const express = require('express')
 
 const app = express()
 
-app.use('/',express.static('C:\\Users\\abhay\\Documents\\code-book\\data.txt'))
+app.use('/',express.static(__dirname+'/public'))
 
 app.get('/',(req,res,next)=>{
     print('connected')
@@ -16,3 +15,5 @@ app.get('/',(req,res,next)=>{
 })
 
 app.listen(8080)
+
+// https://loclahost:8080/public/index.html
