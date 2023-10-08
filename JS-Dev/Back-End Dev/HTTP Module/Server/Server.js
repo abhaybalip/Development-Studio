@@ -12,8 +12,7 @@ const server = http.createServer(function(req,res){
     }))
 })
 
-
-// listening server => http://localhost:8080/
 server.listen(8080,function(err){
     if(err) print('error: '+err)
 })
+// listening server => http://localhost:8080/

@@ -4,6 +4,7 @@ const print = (data)=>console.log(data)
 
 const http = require('http')
 
+// request parameter
 let option = {
     host: 'www.geeksforgeeks.com',
     path: '/',

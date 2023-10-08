@@ -9,8 +9,14 @@ const port = 8080
 const app = express()
 
 app.use('/user/:name', function (req, res, next) {
-    res.send('Helo ' + req.params.name)
+    res.send('Hello ' + req.params.name)
 })
+
+app.use('/user/:name/:surname', function (req, res, next) {
+    res.send('Hello ' + req.params.name+ ' '+ req.params.surname)
+})
+
+
 
 app.listen(port, function (err) {
     if (err) print('error: ' + err)
