@@ -21,3 +21,5 @@ app.use('/user/:name/:surname', function (req, res, next) {
 app.listen(port, function (err) {
     if (err) print('error: ' + err)
 })
+
+// localhost:8080/user:
