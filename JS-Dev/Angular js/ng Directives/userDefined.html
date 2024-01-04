@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="C:\Users\abhay\Documents\code-book\node_env\node_modules\angular\angular.min.js"></script>
+</head>
+
+<body>
+    <!-- initiate app -->
+    <div class="main" ng-app="myApp">
+
+        <div test=""></div>
+        <br>
+        <div test1="directive-attr"></div>
+        <br>
+        <div box="" style="height: 5vh; width: 20vh; transition: 1s all;">
+            {{ text }}
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // define app module
+    var app = angular.module('myApp', [])
+
+    // define directive
+    app.directive('test', function () {
+        return {
+            template: 'This is user defined directive'
+        }
+    })
+
+    app.directive('test1', function () {
+        return {
+            // restrict the directive scope
+            restrict: 'A',
+            // function to execute on lined element
+            link: function (scope, element, attr) {
+                element.css('color', 'red')
+                element.css('font-size', '25px')
+                element.html('This is second user defined directive')
+            },
+        }
+    })
+
+    app.directive('box', function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attr) {
+                scope.text = 'hover it'
+                element.on('mouseenter', function () {
+                    element.css('background-color', 'orange')
+                })
+
+                element.on('mouseleave', function () {
+                    element.css('background-color', '')
+                })
+            }
+        }
+    })
+
+    document.onmo
+</script>

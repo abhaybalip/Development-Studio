@@ -1,0 +1,30 @@
+<!-- Angular js - Init Directive -->
+<!-- used to initialise data variables within a scope -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="C:\Users\abhay\Documents\code-book\node_env\node_modules\angular\angular.min.js"></script>
+</head>
+<body>
+    <!-- app initialise -->
+    <div class="main" ng-app="myApp" ng-init="name='name-surname'" ng-controller="myCtrl">
+        welcome {{ name }}
+
+        <br>
+        {{ name1 }}
+    </div>
+</body>
+</html>
+
+<script>
+    // define anguler module
+    var app = angular.module('myApp',[])
+
+    // define app controller - with scope argument
+    app.controller('myCtrl',function($scope){
+        $scope.name1 = 'name 1'
+    })
+</script>
