@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C:\Users\abhay\Documents\code-book\node_env\node_modules\angular\angular.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main" ng-app="myApp" ng-init="num=100">
+        main => {{ num }}
+        <br>
+        <div class="main01" ng-app="myApp01">
+            main01 => {{ num }}
+        </div>
+        <br>
+        <div class="main02" ng-app="myApp02">
+            main02 => {{ num }}
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const app = angular.module('myApp', [])
+</script>
