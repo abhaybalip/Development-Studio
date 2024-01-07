@@ -1,0 +1,32 @@
+<!-- Angular js - Controller -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="C:\Users\abhay\Documents\code-book\node_env\node_modules\angular\angular.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main" ng-app="myApp" ng-controller="myCtrl">
+        <p ng-bind="b()"></p>
+        <br>
+        <p>{{ text }}</p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const app = angular.module('myApp', [])
+    app.controller('myCtrl', function ($scope) {
+        $scope.b = function(){
+            return 'Hello World'
+        }
+
+        $scope.text = "scope object text variable"
+    })
+</script>
