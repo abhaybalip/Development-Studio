@@ -1,0 +1,48 @@
+Dockerfile Commands by Category:
+
+I. Base Image:
+
+FROM (required): Specifies the base image to use, defining the starting environment for your container.
+Example: FROM ubuntu:20.04
+II. Installation and Management:
+
+RUN (optional): Executes shell commands to install dependencies, configure the environment, or perform other actions during build time.
+Example: RUN apt-get update && apt-get install -y nginx
+COPY (optional): Copies files or directories from the build context to the container's filesystem at the specified destination.
+Example: COPY . /app
+ADD (optional): Similar to COPY, but also supports compressed archives (e.g., .tar.gz, .zip) and downloading from URLs.
+Example: ADD https://website.com/app.tar.gz /app
+III. Environment Variables:
+
+ENV (optional): Sets environment variables accessible within the container.
+Example: ENV DB_HOST=database.example.com
+IV. Working Directory:
+
+WORKDIR (optional): Sets the working directory for the container's processes.
+Example: WORKDIR /app
+V. Entrypoint and Command:
+
+ENTRYPOINT (optional): Defines the executable or shell command to be executed when the container starts.
+Example: ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD (optional): Specifies the default command to run within the container after ENTRYPOINT. Can be overridden at runtime with docker run arguments.
+Example: CMD ["nginx", "-g", "daemon off;"]
+VI. Volumes:
+
+VOLUME (optional): Declares directories within the container to be mounted as volumes, making them persistent across container restarts and accessible from the host machine.
+Example: VOLUME ["/data"]
+VII. User Management:
+
+USER (optional): Sets the user ID (UID) or username to run the container as.
+Example: USER nginx
+VIII. Labels:
+
+LABEL (optional): Adds metadata labels to the image for organizational purposes or integrations.
+Example: LABEL maintainer="John Doe <john.doe@example.com>"
+IX. Networking:
+
+EXPOSE (optional): Declares ports used by the container, allowing them to be exposed when running.
+Example: EXPOSE 80
+X. Multi-Stage Builds:
+
+STAGE (optional): Introduces a new stage in a multi-stage build, enabling separation of concerns and optimization.
+Example: STAGE build RUN ... (build-time commands) STAGE final COPY --from=build /app /app CMD ["nginx", "-g", "daemon off;"]
