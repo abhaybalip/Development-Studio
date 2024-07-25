@@ -11,8 +11,11 @@ INSERT INTO Test VALUES(40,"user 4",1);
 INSERT INTO Test VALUES(50,"user 5",2);
 INSERT INTO Test VALUES(60,"user 6",2);
 
+
 SELECT * FROM Test AS Test_tb;
+
 SELECT user FROM Test as Test_user;
+
 SELECT Id AS Test_Id , user AS Test_user ,lev AS Test_lev FROM Test;
 
 SELECT MIN(Id) AS Test_Min_Id, Max(Id) AS Test_Max_Id FROM Test;

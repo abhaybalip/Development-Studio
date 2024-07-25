@@ -15,7 +15,9 @@ DROP index idx on Test;
 
 -- Auto Increment Index
 CREATE TABLE Tets2(select * from Test);
+
 CREATE Index indx on Test2;
+
 ALTER TABLE Test2 AUTO_INCREMENT = 100;
 
 DROP TABLE Test,Test2;
