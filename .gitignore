@@ -1,0 +1,55 @@
+# Ignore build artifacts inside each Flutter project
+**/build/
+**/.build/
+
+# Ignore build artifacts inside React projects
+/**/build/
+
+# Ignore Node modules at the top level
+node_modules/
+
+# Consider ignoring test coverage reports
+/**/coverage/
+
+# Additional common ignores for Flutter and Node.js projects
+.DS_Store
+.idea
+.vscode
+*.iml
+*.iws
+*.pbxproj
+*.suo
+*.xcworkspace
+**/.git
+**/.svn
+**/.hg
+**/CVS
+**/.DS_Store
+**/.gitattributes
+**/.gitignore
+**/.gitmodules
+**/.idea
+**/.project
+**/.settings
+**/.tmp
+**/.vagrant
+**/build
+**/dist
+**/logs
+**/tmp
+**/node_modules
+**/packages-lock.json
+**/yarn.lock
+**/coverage
+**/lib/.dart_tool
+**/.dart_tool
+**/pubspec.lock
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.flutter_plugins_cache
+**/flutter_*.png
+**/linked_*.ds
+**/unlinked_*.ds
+**/android/app/src/main/AndroidManifest.xml
+**/ios/Runner/Info.plist
+**/ios/Podfile.lock
