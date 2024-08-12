@@ -1,0 +1,45 @@
+## Basic Annotations in Spring
+
+**Basic annotations** in Spring are foundational for defining the structure and behavior of your application components. 
+They provide essential metadata to the Spring container for managing beans and handling requests.
+
+### Core Annotations
+
+* **@Component:** Marks a class as a bean candidate for auto-detection.
+* **@Service:** Specifies a class as a service layer component.
+* **@Repository:** Indicates a data access layer component.
+* **@Controller:** Designates a class as a controller for handling web requests.
+
+### Configuration Annotations
+
+* **@Configuration:** Marks a class as a source of bean definitions.
+* **@Bean:** Indicates a method that returns a bean to be managed by the Spring container.
+
+### Dependency Injection Annotations
+
+* **@Autowired:** Automatically wires dependencies by type.
+* **@Qualifier:** Used with @Autowired to disambiguate between multiple beans of the same type.
+
+### Request Mapping Annotations
+
+* **@RequestMapping:** Maps HTTP requests to handler methods.
+* **@GetMapping:** Maps HTTP GET requests to handler methods.
+* **@PostMapping:** Maps HTTP POST requests to handler methods.
+* **@PutMapping:** Maps HTTP PUT requests to handler methods.
+* **@DeleteMapping:** Maps HTTP DELETE requests to handler methods.
+
+### Data Binding Annotations
+
+* **@RequestParam:** Binds request parameters to method parameters.
+* **@PathVariable:** Binds URI template variables to method parameters.
+* **@RequestBody:** Binds the HTTP request body to a method parameter.
+* **@ResponseBody:** Writes the return value to the HTTP response body.
+
+### Other Common Annotations
+
+* **@EnableAutoConfiguration:** Enables Spring Boot's auto-configuration.
+* **@SpringBootApplication:** A composite annotation that includes @ComponentScan, @Configuration, and @EnableAutoConfiguration.
+
+**Note:** This list is not exhaustive, and there are many other Spring annotations for specific use cases. These are the fundamental ones that you'll encounter frequently when building Spring applications.
+
+**Would you like to delve deeper into any of these annotations or explore specific use cases?**
