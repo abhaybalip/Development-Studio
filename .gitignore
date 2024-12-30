@@ -53,3 +53,7 @@ node_modules/
 **/android/app/src/main/AndroidManifest.xml
 **/ios/Runner/Info.plist
 **/ios/Podfile.lock
+
+
+# spring-boot demo project
+Spring-Boot/demo
