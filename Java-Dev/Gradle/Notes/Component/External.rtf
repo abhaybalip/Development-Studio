@@ -1,0 +1,61 @@
+
+## Note on `ext` in Gradle
+
+### Overview
+
+In Gradle, the `ext` property is a powerful feature that allows developers to define and manage **extra properties** within their build scripts. These properties can be used to store custom data, configurations, and settings that are not part of the standard Gradle model. The `ext` property enhances the flexibility and maintainability of Gradle builds by enabling developers to create dynamic configurations.
+
+### Key Features of `ext`
+
+1. **Extra Properties**: The `ext` property allows you to define key-value pairs that can be accessed throughout your build script. This is particularly useful for storing configuration values, version numbers, or any other data that may need to be reused.
+
+2. **Flexible Syntax**: Extra properties can be defined using an `ext` block or through direct assignment, making it easy to organize and manage properties.
+
+   ```groovy
+   ext {
+       myProperty = "value"
+   }
+   ```
+
+3. **Access and Modification**: Once defined, extra properties can be accessed without the `ext` prefix, allowing for straightforward usage in tasks and other closures. Additionally, these properties can be modified at any point in the build script.
+
+   ```groovy
+   println "My Property: $myProperty" // Accessing
+   myProperty = "newValue" // Modifying
+   ```
+
+4. **Scope**: Extra properties are accessible throughout the entire build script and can also be inherited by subprojects in multi-project builds. This makes it easy to share common configurations across different modules.
+
+### Example Usage
+
+Here’s a simple example demonstrating how to use `ext` in a Gradle build script:
+
+```groovy
+// Defining extra properties
+ext {
+    appVersion = '1.0'
+    appName = 'MyApplication'
+}
+
+// Task to print the properties
+task printInfo {
+    doLast {
+        println "Application Name: $appName"
+        println "Application Version: $appVersion"
+    }
+}
+
+// Task to update the version
+task updateVersion {
+    doLast {
+        appVersion = '2.0' // Updating the version
+        println "Updated Application Version: $appVersion"
+    }
+}
+```
+
+### Benefits
+
+- **Maintainability**: Using `ext` helps keep your build scripts organized and reduces duplication by centralizing configuration values.
+- **Flexibility**: You can easily adjust configuration values without modifying multiple parts of your build script.
+- **Dynamic Builds**: By leveraging extra properties, you can create more dynamic and responsive build processes that adapt based on project needs.

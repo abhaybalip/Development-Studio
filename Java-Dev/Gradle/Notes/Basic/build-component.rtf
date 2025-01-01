@@ -1,0 +1,54 @@
+
+Project properties:
+
+group: The group ID of the project.
+version: The version of the project.
+name: The name of the project.
+description: A description of the project.
+archivesBaseName: The base name for archives created by the project (e.g., JAR, WAR).
+
+Dependency properties:
+
+implementation: Dependencies that are required at runtime.
+api: Dependencies that are exposed to other projects that depend on this project.
+compileOnly: Dependencies that are only needed during compilation.
+runtimeOnly: Dependencies that are only needed at runtime.
+testImplementation: Dependencies that are only needed for testing.
+
+Repository properties:
+
+mavenCentral(): Adds the Maven Central repository to the list of repositories where Gradle can find dependencies.
+jcenter(): Adds the JCenter repository to the list of repositories where Gradle can find dependencies.
+google(): Adds the Google Maven repository to the list of repositories where Gradle can find dependencies.
+
+Plugin properties:
+
+id: The ID of the plugin to apply.
+version: The version of the plugin to apply.
+
+Task properties:
+
+name: The name of the task.
+group: The group that the task belongs to.
+description: A description of the task.
+dependsOn: A list of tasks that this task depends on.
+doFirst: A closure that is executed before the task's main action.
+doLast: A closure that is executed after the task's main action.
+
+SourceSet properties:
+
+java: The Java source set for the main source code.
+test: The Java source set for the test code.
+resources: The resources source set for the main resources.
+testResources: The resources source set for the test resources.
+
+Configuration properties:
+
+name: The name of the configuration.
+extendsFrom: A list of configurations that this configuration extends from.
+transitive: Whether or not dependencies of this configuration should be transitive.
+
+Custom properties:
+
+Any property that you define yourself in your build script.
+

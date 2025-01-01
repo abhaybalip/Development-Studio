@@ -1,0 +1,31 @@
+
+Core Commands:
+
+gradle build: Builds the project. This is often the most common command, as it typically executes all necessary tasks to compile, test, and assemble the project's artifacts (e.g., JAR, WAR files).
+gradle clean: Deletes the build directory and all generated files, effectively cleaning up the project.
+gradle tasks: Displays a list of all available tasks in the project.
+gradle help: Displays general help information about Gradle.
+gradle --version: Displays the version of Gradle that is currently being used.
+
+Dependency Management:
+
+gradle dependencies: Displays a dependency graph of the project, showing all dependencies and their transitive dependencies.
+
+Testing:
+
+gradle test: Executes all tests in the project.
+
+Other Useful Commands:
+
+gradle jar: Creates a JAR file containing the project's compiled classes.
+gradle war: Creates a WAR file containing the project's compiled classes and web resources.
+gradle check: Performs a variety of checks on the project, such as static analysis and code style checks.
+gradle assemble: Assembles the project's artifacts, such as JAR or WAR files, without running tests.
+gradle install: Installs the project's artifacts into the local Maven repository.
+
+Command-Line Options:
+
+-q or --quiet: Runs Gradle in quiet mode, suppressing most output.
+-i or --info: Runs Gradle in info mode, providing more detailed output.
+-D<property_name>=<value>: Sets a system property.
+-P<property_name>=<value>: Sets a project property.

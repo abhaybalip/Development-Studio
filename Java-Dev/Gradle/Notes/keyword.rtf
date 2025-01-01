@@ -1,0 +1,129 @@
+
+Here’s a list of key Gradle keywords along with their descriptions:
+
+### Gradle Keywords with Descriptions
+
+1. **plugins**
+   - **Description**: Used to apply plugins that extend the functionality of the build script, enabling additional features like Java or Android support.
+   - **Example**: 
+     ```groovy
+     plugins {
+         id 'java'
+     }
+     ```
+
+2. **repositories**
+   - **Description**: Specifies the locations where dependencies can be found, such as Maven Central or local file directories.
+   - **Example**:
+     ```groovy
+     repositories {
+         mavenCentral()
+     }
+     ```
+
+3. **dependencies**
+   - **Description**: Defines the libraries and other dependencies required by the project, specifying their scopes (e.g., implementation, test).
+   - **Example**:
+     ```groovy
+     dependencies {
+         implementation 'com.google.guava:guava:32.1.1-jre'
+         testImplementation 'junit:junit:4.13.2'
+     }
+     ```
+
+4. **tasks**
+   - **Description**: Defines custom tasks that can be executed during the build process, allowing for specific actions to be performed.
+   - **Example**:
+     ```groovy
+     tasks.register('hello') {
+         doLast {
+             println 'Hello, Gradle!'
+         }
+     }
+     ```
+
+5. **project**
+   - **Description**: Represents a software component being built, encapsulating tasks and configurations related to that component.
+
+6. **buildscript**
+   - **Description**: Configures the build script itself, including specifying dependencies needed for the build process.
+   - **Example**:
+     ```groovy
+     buildscript {
+         repositories {
+             mavenCentral()
+         }
+         dependencies {
+             classpath 'com.android.tools.build:gradle:7.0.0'
+         }
+     }
+     ```
+
+7. **sourceSets**
+   - **Description**: Defines different sets of source files for various purposes (e.g., main, test), which helps in organizing code.
+
+8. **defaultConfig**
+   - **Description**: Used primarily in Android projects to specify default configuration options such as application ID and SDK versions.
+
+9. **android**
+   - **Description**: A specific block used in Android projects to configure Android-specific settings and properties.
+   - **Example**:
+     ```groovy
+     android {
+         compileSdkVersion 34
+         defaultConfig {
+             applicationId "com.example.app"
+             minSdkVersion 21
+             targetSdkVersion 34
+         }
+     }
+     ```
+
+10. **afterEvaluate**
+    - **Description**: A hook that allows you to run code after the project has been evaluated, useful for dynamic configurations.
+
+11. **apply**
+    - **Description**: Used to apply a plugin or script to the current project, facilitating modular build scripts.
+
+12. **ext**
+    - **Description**: Allows you to define extra properties that can be used throughout your build script.
+    - **Example**:
+      ```groovy
+      ext {
+          myVersion = '1.0'
+      }
+      ```
+
+13. **configurations**
+    - **Description**: Defines named sets of dependencies that can be used in different contexts within a project.
+
+14. **task**
+    - **Description**: A method used to define a task in the build script, specifying its name and actions.
+    - **Example**:
+      ```groovy
+      task hello {
+          doLast {
+              println 'Hello World!'
+          }
+      }
+      ```
+
+15. **doFirst / doLast**
+    - **Description**: Used within a task to specify actions that should occur before or after the main action of the task.
+
+16. **allprojects**
+    - **Description**: A block that allows you to configure all projects within a multi-project build.
+
+17. **subprojects**
+    - **Description**: Similar to allprojects but specifically targets subprojects within a multi-project setup.
+
+18. **group**
+    - **Description**: Specifies the group ID of the project, typically used for publishing artifacts.
+
+19. **version**
+    - **Description**: Defines the version of the project, which is important for dependency management and publishing.
+
+20. **ant**
+    - **Description**: Provides an instance of AntBuilder, allowing you to use Apache Ant tasks within your Gradle build.
+
+These keywords form the core structure of Gradle build scripts, enabling developers to define how their projects are built and managed effectively.

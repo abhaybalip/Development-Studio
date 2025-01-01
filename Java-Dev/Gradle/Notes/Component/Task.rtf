@@ -1,0 +1,52 @@
+
+In Gradle, tasks are fundamental units of work that define actions to be performed during the build process.
+Each task is self-contained and can be configured to depend on other tasks,
+allowing for a structured and organized build workflow.
+
+Here’s a list of key methods associated with tasks, which can be used to configure their behavior and manage their execution:
+
+### Key Task Methods
+
+1. **doFirst(Action)**: 
+   - Defines actions to be executed before the main task action.
+
+2. **doLast(Action)**: 
+   - Specifies actions that should be executed after the main task action.
+
+
+3. **dependsOn(Object...)**: 
+   - Declares dependencies on other tasks, ensuring they run before the current task.
+
+
+4. **finalizedBy(Object...)**: 
+   - Specifies tasks that should always run after the current task, regardless of its outcome.
+
+
+5. **mustRunAfter(Object...)**: 
+   - Indicates that a task must run after another specified task, even if there are no direct dependencies.
+
+
+6. **onlyIf(Closure)**: 
+   - Executes the task only if the provided closure returns true.
+
+
+7. **setDescription(String)**: 
+   - Sets a description for the task, useful for documentation purposes.
+
+
+8. **setGroup(String)**: 
+   - Assigns a group to the task for better organization in the task list.
+
+
+9. **getInputs()**: 
+   - Returns the inputs of the task, which can be defined to track changes and determine if the task needs to run again.
+
+10. **getOutputs()**: 
+    - Returns the outputs of the task, allowing Gradle to understand what files or artifacts will be produced.
+
+11. **setEnabled(boolean)**: 
+    - Enables or disables a task based on conditions or configurations.
+
+
+12. **setOnlyIf(Closure)**: 
+    - Similar to `onlyIf`, but allows for more complex conditions under which a task should execute.

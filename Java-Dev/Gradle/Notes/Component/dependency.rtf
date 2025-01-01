@@ -1,0 +1,47 @@
+
+### Dependency Management in Gradle
+
+Dependency management in Gradle involves several key components that allow you to declare, resolve, and manage external libraries and resources required by your project.
+Here’s a concise overview of these components:
+
+1. **Dependencies Block**:
+   - The `dependencies {}` block in the build file is where you declare your project's dependencies, including external libraries, local JAR files, or other projects within a multi-project build.
+   - Example:
+     ```groovy
+     dependencies {
+         implementation 'com.google.guava:guava:32.1.2-jre'
+         testImplementation 'junit:junit:4.13.2'
+     }
+     ```
+
+2. **Configurations**:
+   - Configurations define the scope of dependencies, such as:
+     - **`implementation`**: Used for dependencies required at compile time and runtime but not exposed to consumers.
+     - **`api`**: Exposes the dependency to consumers, making it available at both compile time and runtime.
+     - **`testImplementation`**: Used for test-specific dependencies.
+
+3. **Repositories**:
+   - The `repositories {}` block specifies where Gradle should look for external dependencies (e.g., Maven Central, Google).
+   - Example:
+     ```groovy
+     repositories {
+         mavenCentral()
+         google()
+     }
+     ```
+
+4. **Transitive Dependencies**:
+   - Gradle automatically includes transitive dependencies, which are dependencies of your declared dependencies. This simplifies dependency management by ensuring all necessary libraries are included.
+
+5. **Conflict Resolution**:
+   - Conflicts can arise when the same library is declared multiple times or when different libraries provide overlapping functionality. Gradle provides mechanisms to manage these conflicts using resolution rules or dependency locking.
+
+6. **Version Catalogs and Platforms**:
+   - Version catalogs allow you to centralize dependency declarations in a single location, making it easier to manage versions across multiple projects.
+   - Platforms can be used to group related modules that should be used together, ensuring consistent versioning.
+
+7. **Viewing Dependencies**:
+   - You can view the dependency tree and see how dependencies are resolved using the command:
+     ```bash
+     ./gradlew :app:dependencies
+     ```
