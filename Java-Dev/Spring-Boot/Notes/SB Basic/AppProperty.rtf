@@ -1,0 +1,46 @@
+
+
+Spring Boot utilizes an application.properties (or application.yml) file to manage configuration properties for applications.
+This file is crucial for customizing the behavior of a Spring Boot application across different environments.
+
+Spring Boot provides a variety of property types that can be configured in the `application.properties` or `application.yml` files.
+Here are the main categories of properties:
+
+### **1. Server Properties**
+- **server.port**: Specifies the port number on which the application will run.
+- **server.servlet.context-path**: Defines the context path of the application.
+
+### **2. Spring Application Properties**
+- **spring.application.name**: Sets the name of the application.
+- **spring.application.admin.enabled**: Enables admin features for the application.
+
+### **3. Data Source Properties**
+- **spring.datasource.url**: The URL for connecting to the database.
+- **spring.datasource.username**: Username for database authentication.
+- **spring.datasource.password**: Password for database authentication.
+- **spring.datasource.driver-class-name**: The driver class for the database.
+
+### **4. Logging Properties**
+- **logging.level.root**: Sets the logging level (e.g., DEBUG, INFO).
+- **logging.file.name**: Specifies the log file name.
+
+### **5. Security Properties**
+- **spring.security.user.name**: Default username for security.
+- **spring.security.user.password**: Default password for security.
+
+### **6. Cache Properties**
+- **spring.cache.type**: Specifies the cache type (e.g., SIMPLE, JPA).
+
+### **7. Actuator Properties**
+- **management.endpoints.web.exposure.include**: Configures which actuator endpoints are exposed.
+
+### **8. Profile-Specific Properties**
+- You can define properties specific to certain profiles using files like `application-dev.properties` or `application-prod.properties`.
+
+### **9. External Configuration Properties**
+- Properties can be loaded from external files or system environment variables, allowing flexibility in configuration management.
+
+### **10. Custom Properties**
+- Developers can define their own custom properties and access them using `@Value` annotation or `Environment` abstraction.
+
+\
