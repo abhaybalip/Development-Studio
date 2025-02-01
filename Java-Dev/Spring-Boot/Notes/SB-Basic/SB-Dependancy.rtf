@@ -1,0 +1,36 @@
+Dependency management in Spring Boot simplifies the inclusion and management of libraries in Java applications. Here’s a concise overview:
+
+### Key Features of Dependency Management in Spring Boot
+
+1. **Build Tools**: 
+   - Spring Boot uses **Maven** or **Gradle** for dependency management, allowing easy resolution and retrieval of dependencies from remote repositories.
+
+2. **Starter Dependencies**:
+   - Provides "starter" dependencies (e.g., `spring-boot-starter-web`) that bundle common libraries needed for specific functionalities, reducing the need for manual dependency declarations.
+
+3. **Transitive Dependency Management**:
+   - Automatically resolves transitive dependencies, which are dependencies required by other libraries, ensuring that all necessary components are included.
+
+4. **Version Management**:
+   - Spring Boot manages versions for a wide range of dependencies through a Bill of Materials (BOM). This allows developers to omit version numbers when declaring dependencies, relying on Spring Boot to provide compatible versions.
+
+5. **Customizing Dependencies**:
+   - Developers can override managed versions if necessary, but this should be done cautiously to avoid compatibility issues.
+
+6. **Dependency Scopes**:
+   - Dependencies can have different scopes (e.g., compile, runtime, test), determining their availability during different phases of the application lifecycle.
+
+### Conclusion
+Spring Boot's dependency management streamlines the process of integrating and managing libraries in Java applications, allowing developers to focus on application logic rather than dependency conflicts. By leveraging starter dependencies and BOMs, Spring Boot ensures applications are built on a stable foundation of compatible libraries [1][2][4].
+
+Citations:
+[1] https://www.codefro.com/2023/10/03/dependency-management/
+[2] https://www.javatpoint.com/spring-boot-dm
+[3] https://docs.spring.io/dependency-management-plugin/docs/current/reference/html/
+[4] https://docs.spring.io/spring-boot/gradle-plugin/managing-dependencies.html
+[5] https://stackoverflow.com/questions/46984069/why-is-spring-boot-dependencies-in-dependencymanagement/46984624
+[6] https://www.baeldung.com/spring-boot-dependency-management-custom-parent
+[7] https://docs.spring.io/spring-boot/appendix/dependency-versions/index.html
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/hi-tq1e.735T0au4_FlsBgOVA?utm_source=copy_output

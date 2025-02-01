@@ -1,0 +1,60 @@
+The **Spring Boot Starter Web** is a key component that simplifies the development of web applications using Spring Boot. Here’s a brief overview of its features and components:
+
+### Overview of Spring Boot Starter Web
+
+1. **Purpose**:
+   - The `spring-boot-starter-web` starter is designed for building web applications, including RESTful services. It encapsulates all necessary dependencies to get a web application up and running quickly.
+
+2. **Dependencies**:
+   - When you include the `spring-boot-starter-web` dependency in your project, it transitively pulls in several essential libraries:
+     - **Spring MVC**: For building web applications and REST APIs.
+     - **Jackson**: For JSON processing, enabling automatic conversion between Java objects and JSON.
+     - **Embedded Tomcat**: By default, it includes an embedded Tomcat server, allowing you to run your application without needing a separate server installation.
+
+### Key Components
+
+- **Spring MVC**: 
+  - A framework that provides model-view-controller architecture and facilitates the creation of web applications.
+
+- **Jackson**:
+  - A library for converting Java objects to JSON and vice versa, which is crucial for RESTful services.
+
+- **Embedded Server**:
+  - The starter includes an embedded server (Tomcat by default), which simplifies deployment by eliminating the need for external server configuration.
+
+- **Configuration and Auto-Configuration**:
+  - Spring Boot’s auto-configuration feature automatically configures various components based on the included dependencies, reducing the need for manual setup.
+
+### Example Usage
+
+To use the Spring Boot Starter Web in your Maven project, add the following dependency in your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
+
+For Gradle, add this line to your `build.gradle`:
+
+```groovy
+implementation 'org.springframework.boot:spring-boot-starter-web'
+```
+
+### Conclusion
+
+The Spring Boot Starter Web streamlines the process of developing web applications by providing all necessary dependencies and configurations in a single starter package. This allows developers to focus on building application features rather than managing complex configurations and dependencies.
+
+Citations:
+[1] https://www.javatpoint.com/spring-boot-starter-web
+[2] https://www.digitalocean.com/community/tutorials/key-components-and-internals-of-spring-boot-framework
+[3] https://docs.spring.io/spring-boot/reference/web/index.html
+[4] https://stackoverflow.com/questions/54453745/spring-initializr-spring-boot-starter-vs-spring-boot-starter-web/54453888
+[5] https://spring.io/guides/gs/spring-boot/
+[6] https://media.geeksforgeeks.org/wp-content/uploads/20220207192020/GeekMVC.jpg?sa=X&ved=2ahUKEwjSovzJkqKLAxU4rZUCHcGsHX8Q_B16BAgHEAI
+[7] https://www.javatpoint.com/spring-boot-starters
+[8] https://www.baeldung.com/spring-boot-starters
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/hi-tq1e.735T0au4_FlsBgOVA?utm_source=copy_output
