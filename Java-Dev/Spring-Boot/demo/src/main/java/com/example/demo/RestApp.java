@@ -1,12 +1,11 @@
-package com.example.demo;
 
-import org.springframework.web.bind.annotation.RestController;
+// package com.example.demo;
 
-@RestController
-class RestApp{
+// @org.springframework.web.bind.annotation.RestController
+// class RestApp {
 
-    // @RequestMapping(path = "/",method = RequestMethod.GET)
-    // public String GetApp(){
-    //     return "Hello World";
-    // }
-}
+//     @org.springframework.web.bind.annotation.GetMapping("/")
+//     public String hello() {
+//         return "Hello, World!";
+//     }
+// }

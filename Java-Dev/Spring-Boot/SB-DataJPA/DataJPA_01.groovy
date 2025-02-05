@@ -1,7 +1,9 @@
+
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -11,19 +13,38 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-// // DataJPA Manager 
-// @Component
-// @SuppressWarnings("unused")
-// class DataJPA {
+// DataJPA Manager 
+@Component
+@SuppressWarnings("unused")
+class DataJPA implements ApplicationRunner {
 
-//     private final PersonService personService;
+    private final PersonService personService;
 
-//     @Autowired
-//     public DataJPA(PersonService personService) {
-//         this.personService = personService;
-//     }
+    @Autowired
+    public DataJPA(PersonService personService) {
+        this.personService = personService;
+    }
 
-// }
+    @Override  // Important: Add the @Override annotation
+    public void run(ApplicationArguments args) throws Exception { // Add ApplicationArguments parameter
+        Person person1 = new Person("Alice", 25);
+        Person person2 = new Person("Bob", 30);
+
+        personService.save(person1);
+        personService.save(person2);
+
+        System.out.println("All persons:");
+        personService.findAll().forEach(System.out::println);
+
+        System.out.println("Person with ID 1:");
+        System.out.println(personService.findById(1L));
+
+        personService.deleteById(1L);
+
+        System.out.println("All persons after deleting person with ID 1:");
+        personService.findAll().forEach(System.out::println);
+    }
+}
 
 // DataBase Entity 
 @Entity

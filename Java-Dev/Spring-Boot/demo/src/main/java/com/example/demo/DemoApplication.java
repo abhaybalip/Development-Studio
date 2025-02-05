@@ -11,20 +11,3 @@ public class DemoApplication {
 	}
 
 }
-
-// sample code
-// @SpringBootApplication // Mark as Spring Boot application
-// public class DemoApplication implements CommandLineRunner { // Implement CommandLineRunner
-
-//     @Autowired
-//     private DataJPA dataJPA; // Inject DataJPA
-
-//     public static void main(String[] args) {
-//         SpringApplication.run(DemoApplication.class, args);
-//     }
-
-//     @Override
-//     public void run(String... args) throws Exception {
-//         dataJPA.run(); // Call dataJPA.run() when the application starts
-//     }
-// }

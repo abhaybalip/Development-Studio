@@ -1,5 +1,6 @@
-# File : src/app/api/test/route.ts
-# url  : localhost:3000/api/test
+
+// File: src / app / api / test / route.ts
+// url: localhost: 3000 / api / test
 
 
 import { headers } from 'next/headers';
@@ -9,7 +10,7 @@ export async function GET(request: NextRequest) {
     var response = NextResponse.json({ "message": "Hi,its working" }, {
         status: 200, headers: {}
     })
-    response.headers.set('key','value')
+    response.headers.set('key', 'value')
 
     return response
 }

@@ -10,6 +10,7 @@ export default function BlogPost({ post }) {
     );
 }
 
+
 export async function getStaticProps(context) {
     const res = await fetch('https://api.example.com/posts/1');
     const post = await res.json();
